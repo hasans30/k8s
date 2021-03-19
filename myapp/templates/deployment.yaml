@@ -13,12 +13,11 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: mydeployment
     spec:
       containers:
         - image: hasans30/nodeexample:v3
-          name: nodeexample
+          name: mydeployment
           resources: {}
 status: {}
