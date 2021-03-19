@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mydeployment
+    app.kubernetes.io/managed-by: Helm
+  name: mydeployment
+spec:
+  type: NodePort
+  ports:
+    - port: 8086
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: mydeployment
+status:
+  loadBalancer: {}
